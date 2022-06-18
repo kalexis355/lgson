@@ -124,10 +124,9 @@ if (feature.properties && feature.properties.name)
 
 
 function popupCiudad(feature, layer) {
-            return feature.properties.CAPITAL == 'N' ? L.marker(layer, L.icon, {
+            return feature.properties.CAPITAL == 'N' ? L.marker(layer, {
                 draggable:false,
-                title:'Capital',
-                myIcon
+                title:'Capital'
                 
             }).bindPopup(feature.properties.CIUDAD)  :
             L.marker(layer, {
